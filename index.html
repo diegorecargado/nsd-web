@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Padres - IE NSD</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background-color: #fcfcfc; }
+    h1 { color: #004080; }
+    nav a {
+      display: inline-block;
+      margin-right: 15px;
+      text-decoration: none;
+      color: #336699;
+    }
+    section { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Bienvenido, Padre de Familia</h1>
+  <nav>
+    <a href="#notas">Notas del Estudiante</a>
+    <a href="#asistencia">Asistencia</a>
+    <a href="#mensajes">Mensajes del Docente</a>
+  </nav>
+  <section>
+    <p>Desde esta plataforma puede hacer seguimiento al desempeño académico de su hijo(a), revisar su asistencia y leer comunicados del docente.</p>
+  </section>
+
+  <script>
+    // Verificación de sesión con localStorage
+    const acceso = localStorage.getItem('loginPadres');
+    if (acceso !== 'activo') {
+      alert('Acceso denegado. Inicie sesión primero.');
+      window.location.href = 'login-padres.html';
+    }
+  </script>
+</body>
+</html>
